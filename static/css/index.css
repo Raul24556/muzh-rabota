@@ -1,0 +1,131 @@
+/* Общие настройки */
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+  color: #222;
+}
+
+h1, h2, h3 {
+  margin: 0.3em 0;
+}
+
+/* Шапка */
+.site-header {
+  background: linear-gradient(to right, #d32f2f, #f2f2f2, #1976d2);
+  color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gerb {
+  width: 70px;
+  height: auto;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.download-icon img {
+  width: 32px;
+  transition: transform 0.2s ease;
+}
+
+.download-icon img:hover {
+  transform: scale(1.15);
+}
+
+/* Главный баннер */
+.main-banner {
+  background: linear-gradient(to right, #d32f2f, #ffffff, #1976d2);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+}
+
+.banner-gerb {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.banner-content h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.banner-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Разделы */
+.info-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.item-preview p {
+  color: #444;
+  line-height: 1.4;
+}
+
+.btn {
+  display: inline-block;
+  background: #1976d2;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #0d47a1;
+}
+
+.more-link {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.more-link:hover {
+  text-decoration: underline;
+}
+
+/* Пустые разделы */
+.empty {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  background: #fafafa;
+}
+

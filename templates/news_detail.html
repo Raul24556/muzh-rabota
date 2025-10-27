@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="news-detail">
+  <h1>{{ news.title }}</h1>
+  <div class="meta">Опубликовано: {{ news.published_at|default:news.created_at }}</div>
+  <div class="content">
+    {{ news.content|linebreaks }}
+  </div>
+  <a href="/" class="btn">← Назад к новостям</a>
+</article>
+{% endblock %}

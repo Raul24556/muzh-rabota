@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: muzh-rabota
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+    startCommand: gunicorn voenkom.wsgi
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        value: r=8uqtyr*e$8#wfsa)h85i=c$j%-kj(n)!)5y2^0xg+aa@3&um
+      - key: ALLOWED_HOSTS
+        value: muzh-rabota.onrender.com

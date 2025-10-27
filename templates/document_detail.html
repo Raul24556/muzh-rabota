@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/documents" class="text-sm text-blue-700 hover:underline">← к списку документов</a>
+<h2 class="text-2xl font-bold mt-3">{{ doc.name }}</h2>
+<p class="mt-4">Файл: <a href="/files/{{ doc.filename }}" class="text-blue-700 hover:underline">скачать</a></p>
+{% endblock %}

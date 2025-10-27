@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Главная — Мужская работа{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-inner">
+    <img src="{% static 'images/gerb_rf.png' %}" alt="Герб РФ" class="hero-gerb">
+    <div class="hero-text">
+      <h2>Мужская работа</h2>
+      <p>Информационный портал</p>
+    </div>
+  </div>
+</section>
+
+<div class="main-sections">
+  <!-- Новости -->
+  <section class="info-section">
+    <h2>Новости</h2>
+    {% if news_list %}
+      <div class="card-list">
+        {% for n in news_list %}
+          <article class="card">
+            {% if n.image %}
+              <img src="{{ n.image.url }}" alt="{{ n.title }}">
+            {% endif %}
+            <h3><a href="{% url 'info:news_detail' n.id %}">{{ n.title }}</a></h3>
+            <p>{{ n.content|truncatechars:150 }}</p>
+          </article>
+        {% endfor %}
+      </div>
+      <a href="{% url 'info:news_list' %}" class="more-link">Все новости</a>
+    {% else %}
+      <p class="empty">Новостей пока нет.</p>
+    {% endif %}
+  </section>
+
+  <!-- Объявления -->
+  <section class="info-section">
+    <h2>Объявления</h2>
+    {% if announcements %}
+      <div class="card-list">
+        {% for a in announcements %}
+          <article class="card">
+            {% if a.image %}
+              <img src="{{ a.image.url }}" alt="{{ a.title }}">
+            {% endif %}
+            <h3>{{ a.title }}</h3>
+            <p>{{ a.description|truncatechars:150 }}</p>
+          </article>
+        {% endfor %}
+      </div>
+      <a href="{% url 'info:announcements' %}" class="more-link">Все объявления</a>
+    {% else %}
+      <p class="empty">Объявлений нет.</p>
+    {% endif %}
+  </section>
+
+  <!-- Документы -->
+  <section class="info-section">
+    <h2>Документы</h2>
+    {% if documents %}
+      <div class="card-list">
+        {% for d in documents %}
+          <article class="card">
+            <h3>{{ d.title }}</h3>
+          </article>
+        {% endfor %}
+      </div>
+      <a href="{% url 'info:documents' %}" class="more-link">Все документы</a>
+    {% else %}
+      <p class="empty">Документов нет.</p>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

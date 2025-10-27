@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Объявления</h1>
+
+<ul class="ann-list">
+  {% for a in announcements %}
+  <li>
+    <strong>{{ a.date|date:"d.m.Y" }}</strong> — {{ a.title }}
+  </li>
+  {% empty %}
+  <li>Объявлений пока нет.</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

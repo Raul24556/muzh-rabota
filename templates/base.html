@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Мужская работа{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="icon" href="{% static 'images/favicon.ico' %}">
+</head>
+<body>
+<header class="main-header">
+  <div class="header-top">
+    <img src="{% static 'images/gerb_rf.png' %}" alt="Герб РФ" class="gerb-small">
+    <h1 class="site-title">Мужская работа</h1>
+  </div>
+
+  <nav class="main-nav">
+    <a href="{% url 'info:index' %}">Главная</a>
+    <a href="{% url 'info:news_list' %}">Новости</a>
+    <a href="{% url 'info:announcements' %}">Объявления</a>
+    <a href="{% url 'info:documents' %}">Документы</a>
+  </nav>
+</header>
+
+<main class="main-content">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <p>© {% now "Y" %} Мужская работа. Все права защищены.</p>
+</footer>
+</body>
+</html>

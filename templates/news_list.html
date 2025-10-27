@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Новости{% endblock %}
+
+{% block content %}
+<section class="info-section">
+  <h2>Новости</h2>
+
+  {% if news_list %}
+    <div class="news-grid">
+      {% for item in news_list %}
+        <article class="item-preview">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.content|truncatechars:200 }}</p>
+          <a href="{% url 'info:news_detail' item.id %}" class="btn">Читать полностью</a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="empty">Новостей пока нет.</p>
+  {% endif %}
+</section>
+{% endblock %}
