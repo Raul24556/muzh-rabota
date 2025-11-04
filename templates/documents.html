@@ -1,18 +1,15 @@
 {% extends "base.html" %}
-{% load static %}
 {% block title %}Документы — Мужская работа{% endblock %}
 {% block content %}
-<h1>Документы</h1>
-
-<div class="documents-list">
+<h2 class="text-primary border-bottom pb-2 mb-3">Документы</h2>
+<div class="list-group">
   {% for d in documents %}
-  <div class="doc-item">
-    <div class="doc-title">{{ d.title }}</div>
-    <div class="doc-date">{{ d.uploaded_at|date:"d.m.Y" }}</div>
-    <a href="{{ d.file.url }}" class="button" download>📄 Скачать</a>
-  </div>
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <span>{{ d.title }} <small class="text-muted">({{ d.uploaded_at|date:"d.m.Y" }})</small></span>
+      <a href="{{ d.file.url }}" download class="btn btn-outline-secondary btn-sm">📄 Скачать</a>
+    </div>
   {% empty %}
-  <p>Документы пока не загружены.</p>
+    <p>Документы пока не загружены.</p>
   {% endfor %}
 </div>
 {% endblock %}

@@ -1,21 +1,21 @@
-/* Общие настройки */
+/* ======= Общие ======= */
 body {
   font-family: "Segoe UI", Roboto, sans-serif;
-  margin: 0;
   background: #f8f9fa;
   color: #222;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-h1, h2, h3 {
-  margin: 0.3em 0;
-}
-
-/* Шапка */
+/* ======= Шапка ======= */
 .site-header {
-  background: linear-gradient(to right, #d32f2f, #f2f2f2, #1976d2);
-  color: white;
-  padding: 10px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: linear-gradient(to right, #d32f2f, #ffffff, #1976d2);
+  color: #fff;
+  padding: 12px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .header-center {
@@ -23,6 +23,7 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .gerb {
@@ -33,99 +34,96 @@ h1, h2, h3 {
 .site-title {
   font-size: 1.8rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
-.download-icon img {
-  width: 32px;
-  transition: transform 0.2s ease;
-}
-
-.download-icon img:hover {
-  transform: scale(1.15);
-}
-
-/* Главный баннер */
+/* ======= Баннер ======= */
 .main-banner {
   background: linear-gradient(to right, #d32f2f, #ffffff, #1976d2);
-  color: white;
+  color: #002b80;
   text-align: center;
-  padding: 50px 20px;
-  position: relative;
+  padding: 60px 20px;
 }
 
 .banner-gerb {
-  width: 100px;
+  width: 110px;
   margin-bottom: 10px;
 }
 
 .banner-content h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 
 .banner-content p {
   font-size: 1.1rem;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
-/* Разделы */
+/* ======= Разделы ======= */
 .info-section {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding: 20px;
-  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  padding: 25px;
+  margin: 25px auto;
   width: 90%;
-  max-width: 900px;
+  max-width: 950px;
+}
+
+/* ======= Карточки ======= */
+.item-preview {
+  margin-bottom: 15px;
 }
 
 .item-preview p {
   color: #444;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
+/* ======= Кнопки ======= */
 .btn {
   display: inline-block;
   background: #1976d2;
   color: white;
-  padding: 6px 14px;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 6px;
   text-decoration: none;
-  margin-top: 10px;
-  transition: background 0.2s;
+  transition: background 0.3s;
 }
 
 .btn:hover {
   background: #0d47a1;
 }
 
+/* ======= Ссылки ======= */
 .more-link {
   display: block;
   text-align: right;
   margin-top: 10px;
   font-size: 0.9rem;
   color: #1976d2;
-  text-decoration: none;
 }
 
 .more-link:hover {
   text-decoration: underline;
 }
 
-/* Пустые разделы */
+/* ======= Пустой блок ======= */
 .empty {
-  color: #777;
+  color: #888;
   font-style: italic;
   text-align: center;
 }
 
-/* Футер */
+/* ======= Футер ======= */
 footer {
+  margin-top: auto;
   text-align: center;
   font-size: 0.9rem;
-  color: #666;
-  padding: 15px;
-  border-top: 1px solid #ddd;
+  color: #555;
+  padding: 15px 0;
+  border-top: 2px solid #ddd;
   background: #fafafa;
 }
-

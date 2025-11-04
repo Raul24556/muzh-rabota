@@ -7,7 +7,7 @@ import logging
 from loguru import logger
 from django.core.cache import cache
 from django.conf import settings
-from celery import Celery
+
 
 # Настройка Loguru
 logger.add(
@@ -22,11 +22,6 @@ logger.add(
 # Настройка стандартного логгера Django для совместимости
 logging.basicConfig(level=logging.INFO)
 django_logger = logging.getLogger("django")
-
-# Настройка Celery
-celery_app = Celery("voenkom")
-celery_app.config_from_object("django.conf:settings", namespace="CELERY")
-celery_app.autodiscover_tasks()
 
 
 def clear_cache():

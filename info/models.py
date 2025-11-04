@@ -49,8 +49,12 @@ class Document(models.Model):
 
     def clean(self):
         ext = os.path.splitext(self.file.name)[1].lower()
-        if ext not in ['.pdf', '.docx']:
-            raise ValidationError('Допустимые форматы: PDF и DOCX')
+        allowed_extensions = ['.pdf', '.docx', '.xls', '.xlsx', '.txt']
+        if ext not in allowed_extensions:
+            allowed = ", ".join(allowed_extensions)
+            raise ValidationError(
+                f'Допустимые форматы: {allowed}'
+            )
 
     def __str__(self):
         return self.title

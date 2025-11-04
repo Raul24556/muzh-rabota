@@ -1090,3 +1090,21 @@ django.template.exceptions.TemplateDoesNotExist: announcements.html
 [2025-10-27 18:17:28,687] WARNING django.request: Not Found: /favicon.ico
 [2025-10-27 18:18:07,380] WARNING django.request: Not Found: /static/css/style.css
 [2025-10-27 18:18:07,384] WARNING django.request: Not Found: /static/images/gerb_rf.png
+[2025-10-29 22:06:10,159] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-10-29 22:14:19,814] INFO django.utils.autoreload: D:\Dev\voenkom\voenkom\settings.py changed, reloading.
+[2025-10-29 22:17:45,738] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-10-29 22:20:57,295] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-02 12:59:44,408] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-02 13:01:25,119] WARNING django.request: Not Found: /favicon.ico
+[2025-11-02 13:07:47,502] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-02 13:59:08,347] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-02 13:59:50,570] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-02 14:01:20,311] WARNING django.request: Not Found: /favicon.ico
+[2025-11-02 14:07:13,052] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-02 14:09:15,769] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-03 08:48:21,488] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-03 08:51:25,933] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-03 16:10:25,936] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-03 16:10:59,102] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-03 16:12:22,527] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-11-03 16:15:08,091] WARNING django.request: Not Found: /favicon.ico

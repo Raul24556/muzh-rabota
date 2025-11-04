@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Объявления</h1>
-
-<ul class="ann-list">
+<h2 class="text-primary border-bottom pb-2 mb-3">Объявления</h2>
+<ul class="list-group">
   {% for a in announcements %}
-  <li>
-    <strong>{{ a.date|date:"d.m.Y" }}</strong> — {{ a.title }}
-  </li>
+    <li class="list-group-item">
+      <strong>{{ a.date|date:"d.m.Y" }}</strong> — {{ a.title }}<br>
+      <small class="text-muted">{{ a.description|default:"(без описания)" }}</small>
+    </li>
   {% empty %}
-  <li>Объявлений пока нет.</li>
+    <li class="list-group-item">Объявлений пока нет.</li>
   {% endfor %}
 </ul>
-
 {% endblock %}

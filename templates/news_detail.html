@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<article class="news-detail">
-  <h1>{{ news.title }}</h1>
-  <div class="meta">Опубликовано: {{ news.published_at|default:news.created_at }}</div>
-  <div class="content">
-    {{ news.content|linebreaks }}
-  </div>
-  <a href="/" class="btn">← Назад к новостям</a>
+<article class="mt-4">
+  <h1 class="text-primary">{{ item.title }}</h1>
+  <p class="text-muted">Опубликовано: {{ item.created_at|date:"d.m.Y H:i" }}</p>
+  <div class="mb-4">{{ item.content|linebreaks }}</div>
+  <a href="{% url 'info:news_list' %}" class="btn btn-outline-primary">← Назад к новостям</a>
 </article>
 {% endblock %}
