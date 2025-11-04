@@ -157,10 +157,20 @@ LOGGING = {
             "backupCount": 3,
             "formatter": "default",
         },
-        "console": {"class": "logging.StreamHandler", "formatter": "default"},
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "default",
+        },
     },
-    "formatters": {"default": {"format": "[%(asctime)s] %(levelname)s %(name)s: %(message)s"}},
-    "root": {"handlers": ["file", "console"], "level": LOG_LEVEL},
+    "formatters": {
+        "default": {
+            "format": "[%(asctime)s] %(levelname)s %(name)s: %(message)s",
+        }
+    },
+    "root": {
+        "handlers": ["file", "console"],
+        "level": LOG_LEVEL,
+    },
 }
 
 # --- Security for production ---
